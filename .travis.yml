@@ -1,0 +1,20 @@
+language: java
+sudo: false # faster builds
+
+jdk:
+  - oraclejdk8
+
+cache:
+  directories:
+    - $HOME/.m2
+
+install: true
+
+script:
+  - travis_wait 30 ./mvnw clean install -DskipTests=false -Dcheckstyle.skip=false -Drat.skip=false -Dmaven.javadoc.skip=true
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+after_failure:
+  - if [ -f oss.log ]; then echo "------TAIL of oss.log------"; tail -n 1000 oss.log; echo "------END of oss.log------"; fi
