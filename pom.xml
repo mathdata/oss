@@ -6,7 +6,26 @@
 
     <groupId>com.mathdata</groupId>
     <artifactId>oss</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>oss-mediation-facade</module>
+        <module>oss-mediation</module>
+        <module>oss-mo-facade</module>
+        <module>oss-mo</module>
+        <module>oss-faultmanager-facade</module>
+        <module>oss-faultmanager</module>
+        <module>oss-perfmanager-facade</module>
+        <module>oss-perfmanager</module>
+        <module>oss-securitymanager-facade</module>
+        <module>oss-securitymanager</module>
+        <module>oss-notifymanager-facade</module>
+        <module>oss-notifymanager</module>
+        <module>oss-configuremanager-facade</module>
+        <module>oss-configuremanager</module>
+        <module>oss-assetsmanager-facade</module>
+        <module>oss-assetsmanager</module>
+    </modules>
 
 
 </project>
